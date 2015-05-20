@@ -1,0 +1,41 @@
+<persistence version="2.1">
+<persistence 
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+    version="2.1">
+  
+  <persistence-unit name="" transaction-type="">
+    <description></description>
+    <provider></provider>
+    <jta-data-source></jta-data-source>
+    <non-jta-data-source></non-jta-data-source>
+    <mapping-file></mapping-file>
+    <jar-file></jar-file>
+    <class></class>
+    <exclude-unlisted-classes></exclude-unlisted-classes>
+    <shared-cache-mode></shared-cache-mode>
+    <validation-mode></validation-mode>
+    <properties>
+      <property>
+        <name></name>
+        <value></value>
+      </property>
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="derby-eclipselink" transaction-type="RESOURCE_LOCAL">
+  		<properties>
+  		  <!-- JDBC properties -->
+  			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+  			<property name="javax.persistence.jdbc.url" value="jdbc:derby:simpleDb;create=true" />
+  			<property name="javax.persistence.jdbc.user" value="user" />
+  			<property name="javax.persistence.jdbc.password" value="password" />
+
+  			<!-- EclipseLink properties -->
+  			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+  			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+  			<property name="eclipselink.logging.level" value="SEVERE"/>
+		</properties>
+  </persistence-unit>
+</persistence>
